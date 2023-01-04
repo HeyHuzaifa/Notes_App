@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/resources/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="classes.css">
+    <title>Notes App- login/Sign in</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="/resources/gif-2.gif" alt="">
+            <h3 class="">Notes App</h3>
+        </div>
+
+    </nav>
+    <br>
+    <br>
+    <div class="cont">
+        <div class="form sign-in" id="login_pg">
+            <h2>Welcome</h2>
+            <label>
+                <span id="emailSpan">Email</span>
+                <input type="email" id="loginEmail">
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" id="loginPass">
+            </label>
+            <img src="/resources/hide.png" alt="" id="loginHide" class="cursor">
+            <img src="/resources/show eye.png" alt="" id="loginShow" class="cursor">
+            <p class="forgot-pass">Forgot password?
+                <a href="#" id="go_to_signup">Don't have an account? Please Sign up!</a>
+            </p>
+            <button type="button" class="submit" id="login">Login</button>
+         
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                 
+                    <h3>Don't have an account? Please Sign up!<h3>
+                </div>
+                <div class="img__text m--in">
+                
+                    <h3>If you already has an account, just sign in.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Sign Up</span>
+                    <span class="m--in">Login</span>
+                </div>
+            </div>
+            <div class="form" id="sign_in_pg">
+                <h2>Create your Account</h2>
+                <label>
+                    <span id="nameSpan">Name</span>
+                    <input type="text" id="name">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" id="email">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" id="password" >
+                </label>
+                <img src="/resources/hide.png" alt="" id="hide" class="cursor">
+                <img src="/resources/show eye.png" alt="" id="show" class="cursor">
+                <a href="#" id="go_to_login" class="center-horizontal">If you already has an account, just login in.</a>
+                <button type="button" class="submit" id="signUpBtn">Sign Up</button>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

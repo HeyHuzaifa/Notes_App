@@ -1,0 +1,186 @@
+@media (min-width: 900px) {
+    #go_to_signup {
+        display: none;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 310px) {
+    .logo img {
+        width: 14vw;
+        height: 16vw;
+    }
+
+    .logo h3 {
+        margin-bottom: 0vw;
+    }
+
+    .cont {
+        width: 250px;
+        display: flex;
+    }
+
+    .form {
+        padding: 50px 0px 0;
+    }
+
+    label {
+        display: block;
+        width: 180px;
+        margin: 25px 30px;
+        text-align: center;
+    }
+
+
+    .forgot-pass {
+        display: flex;
+        width: 84vw;
+    }
+
+    .submit {
+        width: 30vw;
+    }
+
+    #loginHide {
+        width: 3.5vw;
+        transform: translate(78vw, -12.5vw);
+    }
+
+    /* sign Up page */
+
+    .transform2 {
+        transform: translateX(-68.8rem);
+    }
+
+    .form h2 {
+        font-size: 20px;
+    }
+
+    .transform2 label {
+        margin: 25px auto;
+    }
+
+    #go_to_login {
+        font-size: 11px;
+    }
+}
+
+@media (min-width:310px) and (max-width: 410px) {
+    .logo img {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .logo h3 {
+        margin-bottom: 0vw;
+    }
+
+    .cont {
+        width: 289px;
+        display: flex;
+    }
+
+    .form {
+        padding: 50px 10px 0;
+    }
+
+    label {
+        display: block;
+        width: 220px;
+        margin: 25px auto 0;
+        text-align: center;
+    }
+
+
+    .forgot-pass {
+        text-align: justify;
+    }
+
+    #loginHide {
+        width: 4.5vw;
+        transform: translate(76vw, -3.5vw);
+    }
+
+    #loginShow {
+        width: 4.5vw;
+        transform: translate(76vw, -3.5vw);
+    }
+
+    /* sign up page */
+
+    .transform2 {
+        transform: translateX(-67.5rem);
+    }
+
+    .form h2 {
+        font-size: 20px;
+    }
+
+    .transform2 label {
+        margin: 25px auto;
+    }
+
+    #go_to_login {
+        font-size: 11px;
+    }
+
+    .submit {
+        width: 32vw;
+    }
+
+}
+
+@media (min-width: 410px) and (max-width: 625px) {
+
+    .logo img {
+        width: 7vw;
+        height: 8vw;
+    }
+
+    .logo h3 {
+        margin-bottom: 0vw;
+    }
+
+    .cont {
+        width: 400px;
+        display: flex;
+    }
+
+    #loginHide {
+        width: 4.5vw;
+        transform: translate(76vw, -3.5vw);
+    }
+
+    #loginShow {
+        width: 4.5vw;
+        transform: translate(76vw, -3.5vw);
+    }
+
+    /* sign up page */
+
+    .transform2 {
+        transform: translateX(-64rem);
+    }
+
+    #hide {
+        width: 3.5vw;
+        transform: translate(27rem, -3vw);
+    }
+}
+
+@media (min-width: 625px) and (max-width: 900px) {
+
+    .logo img {
+        width: 7vw;
+        height: 8vw;
+    }
+
+    .logo h3 {
+        margin-bottom: 0vw;
+    }
+
+    .cont {
+        width: 600px;
+        display: flex;
+    }
+
+}

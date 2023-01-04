@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/home-images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home-responsive.css">
+    <link rel="stylesheet" href="classes.css">
+    <title>Notes App</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="logo pointer">
+                <img src="/Resources/gif-2.gif" alt="" id="gif" class="mt-1">
+                <h2 class="center-vertical ml-1 color-white">Notes App</h2>
+            </div>
+
+            <div class="Icons">
+                <img src="/Resources/hamb.png" alt="" id="hamb">
+                <!-- Cross Icon -->
+                <img src="/Resources/cross.png" alt="" id="cross" class="none">
+            </div>
+
+            <!-- Nav-Items -->
+
+            <div class="nav-items y-2px" id="navItems">
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <!-- Search bar -->
+                    <div class="search pointer" id="search">
+                        <input type="Search" placeholder="Search your notes..." id="searchTxt">
+                    </div>
+
+                    <!-- Button -->
+
+                    <div class=" center-vertical ">
+                        <button class="btn">Search</button>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="login" id="navLogin">
+                <div class="login">
+                    <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover" colors="primary:#ffffff"
+                        state="hover" class="lord-icon pointer">
+                    </lord-icon>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+
+    </nav>
+
+
+    <!-- Main Section -->
+
+    <div class="options none" id="options">
+        <ul class="list-style pr-2 overflow">
+            <li><a href="#">Home</a></li>
+        </ul>
+
+        <div class="pointer pr-2" id="search">
+            <input type="Search" placeholder="Search your notes..." id="searchTxt">
+        </div>
+
+        <!-- Button -->
+
+        <div class="btn-div pr-2 center-vertical ">
+            <button class="btn">Search</button>
+        </div>
+        </ul>
+    </div>
+    </div>
+
+    </div>
+
+    <section class="section-height" id="section">
+        <div class="txt center-horizontal">
+            <h1>Hey What's On Your Mind</h1>
+        </div>
+        <div class="container-wrapper center-horizontal">
+            <div class="container p-2">
+                <div class="card">
+                    <div class="card-body p-2">
+                        <div class="title space-between">
+                            <h5 class="card-title color-white inline">Add a note</h5>
+                            <div class="title-and-plus-icon center-vertical">
+                                <div class="input-title ">
+                                    <input type="text" id="noteTitle" placeholder="Add title" required>
+                                    <!-- <button class="title-btn">  -->
+                                    <div class="plus-icon">
+                                        <div class="error none" id="error">
+                                            <lord-icon src="https://cdn.lordicon.com/bmnlikjh.json" trigger="loop"
+                                                colors="primary:#c71f16" state="hover-1" style="width:50px;height:35px">
+                                            </lord-icon>
+                                        </div>
+                                        <img src="/Resources/plus.png" alt=""
+                                            class=" hidden pointer opacity-animation" id="plus">
+                                    </div>
+                                    <!-- </button>  -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group none center-horizontal mt-1" id="form">
+                            <textarea class="form-control " id="addTxt" rows="5" cols="107"></textarea>
+                        </div>
+                    </div>
+                    <div class="notes-btn none space-between" id="notesBtn">
+                        <button class="btn" id="addBtn">Save Note</button>
+                        <button class="btn" id="clearBtn">Clear all Notes</button>
+                    </div>
+                </div>
+                <div class="Your Notes">
+                    <div class="notes-txt ml-2 ">
+                        <h1>Your</h1>
+                        <h1>Notes</h1>
+                    </div>
+                </div>
+                <div class="" id="notes">
+                    <!-- <div class="no-notes color-white p-2">
+                        <span>Nothing to show! Use "Add a Note" section above to add notes.</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="home.js"></script>
+<script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+
+</html>

@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    /* border: 2px solid; */
+    /* background: rgb(141, 42, 255);
+    background: linear-gradient(79deg, rgba(141, 42, 255, 1) 0%, rgba(83, 57, 255, 1) 35%, rgba(0, 83, 241, 1) 64%, rgba(0, 139, 255, 1) 83%); */
+}
+
+body{
+    background: rgb(141, 42, 255);
+    background: linear-gradient(79deg, rgba(141, 42, 255, 1) 0%, rgba(83, 57, 255, 1) 35%, rgba(0, 83, 241, 1) 64%, rgba(0, 139, 255, 1) 83%);
+    animation: fadeInAnimation ease 3s;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background: rgb(141, 42, 255);
+    background: linear-gradient(79deg, rgba(141, 42, 255, 1) 0%, rgba(83, 57, 255, 1) 35%, rgba(0, 83, 241, 1) 64%, rgba(0, 139, 255, 1) 83%);
+    height: 4.5vw;
+}
+
+/* Logo */
+
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    -webkit-filter: invert(100%);
+    /* Safari/Chrome */
+    filter: invert(100%);
+    width: 3vw;
+    height: 4vw;
+    padding-bottom: 1vw;
+}
+
+.hamb-img{
+    display: flex;
+    justify-content: end;
+}
+
+.options{
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+    /* height: 12vw; */
+    padding: 3vw;
+    justify-content: space-between;
+    animation: slide ease 0.5s;
+}
+
+@keyframes slide {
+    0% {
+        height: 0vw;
+    }
+    100% {
+        height: 10vw;
+     }
+}
+
+.options a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#search, .btn-div{
+    overflow: hidden;
+}
+
+
+#hamb, #cross{
+    -webkit-filter: invert(100%);
+    /* Safari/Chrome */
+    filter: invert(100%);
+}
+
+
+/* .btn-opt{
+    width: 18vw;
+    border-radius: 9px;
+    border: 1px solid #c4c3c3;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+} */
+
+/* Nav-items  */
+
+.nav-items{
+    display: grid;
+    place-content: center;
+}
+
+.nav-items ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.2em;
+}
+
+.nav-items ul li {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 6vw;
+    margin-right: 11vw;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-items ul li:hover {
+    letter-spacing: 2px;
+}
+
+.nav-items ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-items ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-items ul li a:hover::after {
+    width: 50%;
+}
+
+
+/* Search Bar */
+
+
+.search {
+    padding-right: 2vw;
+}
+
+.search input {
+    height: 2vw;
+    border-radius: 1vw;
+    width: 11vw;
+    border: 1px solid #c4c3c3;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.search ::placeholder {
+    color: #000;
+    position: relative;
+    left: 1vw;
+}
+
+.search ::placeholder :hover {
+    letter-spacing: 2px;
+}
+
+
+/* login */
+
+.lord-icon{
+    /* transform: translate(1.3vw, 1.3vw); */
+    width: 50px;
+    height: 35px;
+}
+
+
+.login{
+    display: flex;
+    transform: translate(0, 10px);
+}
+
+.login ul {
+    list-style: none;
+    font-size: 1.2em;
+    transform: translate(9px, 7px);
+}
+
+.login ul li{
+    cursor: pointer;
+    font-weight: bold;
+    /* margin-left: 4vw; */
+    transition: 0.3s ease-in-out;
+}
+
+.login ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.login ul li:hover {
+    letter-spacing: 2px;
+}
+
+.login ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: 39px;
+    left: 53%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.login ul li a:hover::after {
+    width: 40%;
+}
+
+/* Section */
+
+.txt h1 {
+    font-size: 100px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    line-height: 160px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    background: url(/Resources/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: anime 20s linear infinite;
+}
+
+@keyframes anime {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+
+.container{
+    /* border: 2px solid; */
+    width: 81vw;
+}
+/* Add Notes Section */
+
+/* Glassmorphism card effect */
+.card {
+    backdrop-filter: blur(3px) saturate(102%);
+    -webkit-backdrop-filter: blur(3px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.card-title {
+    font-size: 2em;
+}
+
+.input-title{
+    display: flex;
+}
+
+
+.input-title input{
+    padding: 10px;
+    height: 2vw;
+    margin-top: 9px;
+    border-radius: 1vw;
+    border: none;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.input-title ::placeholder{
+    position: relative;
+    left: 5px;
+    font-weight: 900;
+}
+
+.form-control {
+    background-image: linear-gradient(rgba(53, 85, 131, 0.1) 0%, rgba(255, 255, 255, 0.2) 8%), url(/Resources/bg.png);
+    background-position: 0 7px, 0 0;
+    background-size: 100% 25px, 10% 10%;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgb(118 80 13 / 90%);
+    font-size: 21px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+
+.error{
+    transform: translate(0px, 10px);
+    transition: 0.8s ease-in-out;
+}
+
+#plus{
+    transition: 0.8s ease-in-out;
+}
+.error::after {
+    content: "Enter a title";
+    color: #FF0000;
+    font-size: 1.2em;
+    font-weight: 900;
+    position: relative;
+    text-shadow: 0px 0px 8px rgb(255 255 255);
+    bottom: 10px;
+}
+
+.notes-btn {
+    margin: 0 2vw;
+    padding-bottom: 1vw;
+}
+
+.notes-btn button:nth-child(1){
+    width: 5vw;
+    height: 3vw;
+}
+
+.notes-btn button:nth-child(1):hover {
+    background: #9e4ff8;
+}
+B
+.notes-btn button:nth-child(2) {
+    width: 5vw;
+    height: 2.5vw;
+    font-size: 13px;
+}
+
+.notes-btn button:nth-child(2):hover {
+    background-color: transparent;
+}
+
+.notes-txt h1 {
+    font-family: 'Poppins', sans-serif;
+    padding: 1vw 0;
+    color: #fff;
+    font-size: 3em;
+    display: inline;
+}
+
+.notes-txt h1:nth-child(2) {
+    margin-left: 13px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 100;
+}
+
+
+.noteCard {
+    backdrop-filter: blur(3px) saturate(102%);
+    -webkit-backdrop-filter: blur(3px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.card-title{
+    color: #fff;
+}
+
+.card-text{
+    background-image: linear-gradient(rgba(53, 85, 131, 0.1) 0%, rgba(255, 255, 255, 0.2) 8%), url(/Resources/bg.png);
+    background-position: 0 7px, 0 0;
+    background-size: 100% 28px, 10% 10%;
+    border-radius: 3px;
+    /* box-shadow: 0 0 10px rgb(118 80 13 / 90%); */
+    font-size: 21px;
+    padding: 15px;
+    resize: both;
+    overflow: auto;
+    transition: 0.08s ease-in-out;
+}
+
+.btn{
+    width: 4.5vw;
+    height: 3vw;
+    border-radius: 9px;
+    border: 1px solid #c4c3c3;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+#noteContent button{
+    width: 5.5vw;
+    margin-top: 1vw;
+}
+
+#noteContent button:hover{
+    background: #9e4ff8;
+}
+
+.no-notes{
+    backdrop-filter: blur(3px) saturate(102%);
+    -webkit-backdrop-filter: blur(3px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    font-size: 2em;
+    transition: 7s linear ease-in;
+}
+
+.no-notes span{
+    text-shadow: 0px 0px 4px rgb(255 0 0);
+    transition: 7s linear ease-in;
+}
+
+
+#notes{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
