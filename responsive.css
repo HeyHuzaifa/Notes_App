@@ -2,6 +2,10 @@
     #go_to_signup {
         display: none;
     }
+    #go_to_login {
+        display: none;
+    }
+
 }
 
 @media (min-width: 280px) and (max-width: 310px) {

@@ -91,8 +91,8 @@ signUp.addEventListener('click', (e) => {
             userData = []
         }
         console.log("userData", userData);
-        
-        
+
+
         let user = new data()
         user.userData(nameVal, emailVal, passVal)
         console.log(user);
@@ -115,69 +115,63 @@ loginbtn.addEventListener('click', () => {
     let passVal = loginPass.value
 
     // console.log(`Email is`, emailVal, `and the password is`, passVal );`
+    const userData = JSON.parse(localStorage.getItem("userData") || "[]");
+    // console.log(userData);
+    userData.forEach(arrIndex => {
+        let email = arrIndex.email
+        let password = arrIndex.password
 
-    if (emailVal == "" && passVal == "") {
-        // console.log("all null");
-        emailSpan.innerText = `*Enter all the requirements*`, emailSpan.style.color = '#FF0000'
-        removeError("email", emailSpan)
+        if (emailVal == "" && passVal == "") {
+            console.log("all null");
+            emailSpan.innerText = `*Enter all the requirements*`, emailSpan.style.color = '#FF0000'
+            removeError("email", emailSpan)
 
-    }
+        }
+        else if (emailVal == "") {
+            loginEmail.value = ""
+            loginPass.value = ""
+            addError("email", emailSpan);
+            removeError("email", emailSpan)
+            console.log("null email"); 
+        }
+        else if (passVal == "") {
 
-    else if (emailVal == "") {
-        loginEmail.value = ""
-        loginPass.value = ""
-        addError("email", emailSpan);
-        removeError("email", emailSpan)
-        // console.log("null email"); 
-    }
-    else if (passVal == "") {
+            loginEmail.value = ""
+            loginPass.value = ""
+            addError("password", emailSpan);
+            removeError("email", emailSpan)
+            console.log("null pass"); 
+        }
+        else if (email !== emailVal && password !== passVal) {
+            console.log("wrong");
+            loginEmail.classList.add('border')
+            loginPass.classList.add('border')
+            emailSpan.innerText = `*Invalid, Enter correct details*`, emailSpan.style.color = '#FF0000'
+            loginEmail.value = ""
+            loginPass.value = ""
+            remove();
+        }
+        else if (email !== emailVal) {
+            loginEmail.value = ""
+            // loginPass.value = ""
+            emailSpan.innerText = `*Email is incorrect*`, emailSpan.style.color = '#FF0000'
+            removeError("Email", emailSpan)
+            console.log("only email is incorrect");
+        }
+        else if (password !== passVal) {
+            loginPass.value = ""
+            emailSpan.innerText = `*Password is incorrect*`, emailSpan.style.color = '#FF0000'
+            removeError("Email", emailSpan)
+            console.log("only Password is incorrect");
+        }
+        else {
+            console.log("ok");
+            loginEmail.value = ""
+            loginPass.value = ""
+            window.location.href = "home.html"
+        }
 
-        loginEmail.value = ""
-        loginPass.value = ""
-        addError("password", emailSpan);
-        removeError("email", emailSpan)
-        // console.log("null pass"); 
-    }
 
-    else {
-        // console.log(emailVal);
-        // console.log("all sett");
-        const userData = JSON.parse(localStorage.getItem("userData") || "[]");
-        // console.log(userData);
-        userData.forEach(arrIndex => {
-            let email = arrIndex.email
-            let password = arrIndex.password
-            if (email == emailVal && password == passVal) {
-                console.log("ok");
-                loginEmail.value = ""
-                loginPass.value = ""
-                window.location.href = "home.html"
-            }
-            else if (email !== emailVal && password !== passVal){
-                console.log("wrong");
-                loginEmail.classList.add('border')
-                loginPass.classList.add('border')
-                emailSpan.innerText = `*Enter all the requirements*`, emailSpan.style.color = '#FF0000'
-                loginEmail.value = ""
-                loginPass.value = ""
-                remove();
-            }
-            else if (email !== emailVal){
-                loginEmail.value = ""
-                // loginPass.value = ""
-                emailSpan.innerText = `*Email is incorrect*`, emailSpan.style.color = '#FF0000'
-                removeError("Email", emailSpan)
-                console.log("only email is incorrect");
-            }
-            else if (password !== passVal){
-                loginPass.value = ""
-                emailSpan.innerText = `*Password is incorrect*`, emailSpan.style.color = '#FF0000'
-                removeError("Email", emailSpan)
-                console.log("only Password is incorrect");
-            }
-        });
-        
-        
         function remove() {
             setInterval(() => {
                 loginEmail.classList.remove('border')
@@ -185,66 +179,44 @@ loginbtn.addEventListener('click', () => {
                 emailSpan.innerText = 'Email', emailSpan.style.color = '#cfcfcf'
             }, 5500);
         }
-        
-        // let email = userData.email
-        // console.log(typeof userData);
-        // if(emailVal = )
+    })
+    })
 
-        // const userData = JSON.parse(localStorage.getItem("userData") || "[]");
-
-        // if (userData == null) {
-        //     userData = []
-        // }
-        // console.log("userData", userData);
+    // For signup showing password icon
 
 
-        // let user = new data()
-        // user.userData(nameVal, emailVal, passVal)
-        // console.log(user);
-        // userData.push(user);
-        // localStorage.setItem("userData", JSON.stringify(userData))
-        // username.value = ""
-        // email.value = ""
-        // password.value = ""
-        // window.location.reload();
-    }
-})
+    hide.addEventListener('click', () => {
+        hide.style.display = 'none'
+        show.style.display = 'block'
+        password.setAttribute('type', "text")
+    })
+    show.addEventListener('click', () => {
+        show.style.display = 'none'
+        hide.style.display = 'block'
+        password.setAttribute('type', "password")
+    })
 
-// For signup showing password icon
+    // For Login showing password icon
 
-
-hide.addEventListener('click', () => {
-    hide.style.display = 'none'
-    show.style.display = 'block'
-    password.setAttribute('type', "text")
-})
-show.addEventListener('click', () => {
-    show.style.display = 'none'
-    hide.style.display = 'block'
-    password.setAttribute('type', "password")
-})
-
-// For Login showing password icon
-
-loginHide.addEventListener('click', () => {
-    loginHide.style.display = 'none'
-    loginShow.style.display = 'block'
-    loginPass.setAttribute('type', "text")
-})
-loginShow.addEventListener('click', () => {
-    loginShow.style.display = 'none'
-    loginHide.style.display = 'block'
-    loginPass.setAttribute('type', "password")
-})
+    loginHide.addEventListener('click', () => {
+        loginHide.style.display = 'none'
+        loginShow.style.display = 'block'
+        loginPass.setAttribute('type', "text")
+    })
+    loginShow.addEventListener('click', () => {
+        loginShow.style.display = 'none'
+        loginHide.style.display = 'block'
+        loginPass.setAttribute('type', "password")
+    })
 
 
-go_to_signup.addEventListener('click', ()=>{
-    login_pg.classList.add('transform1');
-    sign_in_pg.classList.add('transform2');
-})
+    go_to_signup.addEventListener('click', () => {
+        login_pg.classList.add('transform1');
+        sign_in_pg.classList.add('transform2');
+    })
 
 
-go_to_login.addEventListener('click', ()=>{
-    login_pg.classList.remove('transform1');
-    sign_in_pg.classList.remove('transform2');
-})
+    go_to_login.addEventListener('click', () => {
+        login_pg.classList.remove('transform1');
+        sign_in_pg.classList.remove('transform2');
+    })
