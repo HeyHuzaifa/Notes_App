@@ -1,4 +1,4 @@
-console.log("Working");
+// console.log("Working");
 showNotes();
 // Recognizing variables
 
@@ -77,7 +77,7 @@ addBtn.addEventListener('click', (e) => {
         noteTitle.value = "";
         addTxt.value = "";
         plus.classList.add('none')
-        console.log(notes);
+        // console.log(notes);
         showNotes();
         window.location.reload();
     }
@@ -132,7 +132,7 @@ function showNotes() {
 
 function deleteNote(index) {
 
-    console.log("i am deleting this", index);
+    // console.log("i am deleting this", index);
     let notes = localStorage.getItem('notes')
     if (notes == null) {
         notesObj = [];
@@ -165,7 +165,7 @@ search.addEventListener("input", function () {
     })
 })
 
-console.log(notes);
+// console.log(notes);
 
 
 hamb.addEventListener('click', ()=>{
